@@ -1,6 +1,3 @@
-## Deploy to Heroku
-#[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://dashboard.heroku.com/new?template=https://github.com/aswifi/aria2-ariang-docker)
-
 Aria2 + AriaNg + Filebrowser
 
 English | [简体中文](https://github.com/wahyd4/aria2-ariang-docker/blob/master/README.CN.md)
