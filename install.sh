@@ -54,6 +54,6 @@ adduser -D -u 1000 junv \
   && cd /usr/local/www/aria2 \
   && chmod +rw /app/conf/aria2.session \
   && wget -N --no-check-certificate https://github.com/aswifi/WebGL_temp/archive/refs/tags/1.0.zip \
-  && unzip 1.0.zip
-  && rm -rf 1.0.zip
+  && unzip 1.0.zip \
+  && rm -rf 1.0.zip \
   && chmod -R 755 /usr/local/www/aria2 \
