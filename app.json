@@ -1,9 +1,0 @@
-{
-  "name": "Aria2-ariang-docker-Heroku",
-  "description": "aria2-ariang-docker via heroku.",
-  "logo": "",
-  "keywords": ["Aria2-ariang-docker","Heroku"],
-  "website": "",
-  "repository": "https://github.com/aswifi/aria2-ariang-docker",
-  "stack": "container"
- }
