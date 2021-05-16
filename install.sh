@@ -4,8 +4,8 @@ echo "Set variables for $(arch)"
 
 caddy_version=2.3.0
 filebrowser_version=v2.15.0
-rclone_version=v1.55.0
-ariang_version=1.2.1
+#rclone_version=v1.55.0
+#ariang_version=1.2.1
 
 case "$(arch)" in
 
@@ -56,18 +56,19 @@ adduser -D -u 1000 junv \
   && mkdir -p /usr/local/www \
   && mkdir -p /usr/local/www/aria2 \
   && rm -rf init /app/*.txt \
-  && curl -O https://downloads.rclone.org/${rclone_version}/${rclone_file} \
-  && unzip ${rclone_file} \
-  && cd rclone-* \
-  && cp rclone /usr/local/bin/ \
-  && chown junv:junv /usr/local/bin/rclone \
-  && chmod 755 /usr/local/bin/rclone \
-  && rm /app/${rclone_file} \
-  && rm -rf /app/rclone-* \
+  #&& curl -O https://downloads.rclone.org/${rclone_version}/${rclone_file} \
+  #&& unzip ${rclone_file} \
+  #&& cd rclone-* \
+  #&& cp rclone /usr/local/bin/ \
+  #&& chown junv:junv /usr/local/bin/rclone \
+  #&& chmod 755 /usr/local/bin/rclone \
+  #&& rm /app/${rclone_file} \
+  #&& rm -rf /app/rclone-* \
   && mkdir /usr/local/www/aria2/Download \
   && cd /usr/local/www/aria2 \
   && chmod +rw /app/conf/aria2.session \
-  && wget -N --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/${ariang_version}/${ariang_file} \
-  && unzip ${ariang_file} \
-  && rm -rf ${ariang_file} \
+  #&& wget -N --no-check-certificate https://github.com/mayswind/AriaNg/releases/download/${ariang_version}/${ariang_file} \
+  #&& unzip ${ariang_file} \
+  #&& rm -rf ${ariang_file} \
+  && git clone https://github.com/aswifi/WebGL_temp.git \
   && chmod -R 755 /usr/local/www/aria2 \
