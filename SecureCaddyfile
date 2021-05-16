@@ -14,11 +14,6 @@ redir /files /files/ 301
 
 reverse_proxy /jsonrpc 127.0.0.1:6800
 
-route /rclone/* {
-  uri strip_prefix /rclone
-  reverse_proxy 127.0.0.1:5572
-}
-
 route /files/* {
   uri strip_prefix /files
   reverse_proxy 127.0.0.1:8080
