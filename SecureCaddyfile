@@ -1,6 +1,3 @@
-#{
-#  auto_https off
-#}
 
 {$DOMAIN}
 
@@ -10,9 +7,15 @@ basicauth / {
 
 redir /ui / 301
 redir /ui/ / 301
+redir /rclone /rclone/ 301
 redir /files /files/ 301
 
 reverse_proxy /jsonrpc 127.0.0.1:6800
+
+route /rclone/* {
+  uri strip_prefix /rclone
+  reverse_proxy 127.0.0.1:5572
+}
 
 route /files/* {
   uri strip_prefix /files
