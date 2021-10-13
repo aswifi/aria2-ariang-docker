@@ -2,8 +2,8 @@
 
 echo "Set variables for $(arch)"
 
-caddy_version=2.4.3
-filebrowser_version=v2.15.0
+caddy_version=2.4.5
+filebrowser_version=v2.17.2
 
 case "$(arch)" in
 
