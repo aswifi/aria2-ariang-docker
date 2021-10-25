@@ -1,3 +1,18 @@
+FROM golang:alpine AS build-forego
+
+RUN apk add --no-cache git openssh
+
+WORKDIR /app
+
+RUN git clone https://github.com/wahyd4/forego.git \
+    && cd forego \
+    && git checkout 20180216151118 \
+    && go mod init \
+    && go mod vendor \
+    && go mod download \
+    && go build -o forego \
+    && chmod +x forego
+
 FROM alpine:edge
 
 LABEL AUTHOR=Junv<wahyd4@gmail.com>
@@ -19,6 +34,8 @@ ENV XDG_CONFIG_HOME=/app/.caddy/config
 ADD install.sh aria2c.sh caddy.sh Procfile init.sh start.sh /app/
 ADD conf /app/conf
 ADD Caddyfile SecureCaddyfile /usr/local/caddy/
+
+COPY --from=build-forego /app/forego/forego /app
 
 RUN ./install.sh
 
