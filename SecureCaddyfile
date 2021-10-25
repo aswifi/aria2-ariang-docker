@@ -4,10 +4,6 @@
 
 {$DOMAIN}
 
-basicauth / {
-  ARIA2_USER ARIA2_PWD_ENCRYPT
-}
-
 redir /ui / 301
 redir /ui/ / 301
 redir /files /files/ 301
