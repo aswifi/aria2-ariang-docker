@@ -56,4 +56,4 @@ adduser -D -u 1000 junv \
   && wget -N --no-check-certificate https://github.com/aswifi/WebGL_temp/raw/main/WebGL_temp-1.0.zip \
   && unzip WebGL_temp-1.0.zip \
   && rm -rf WebGL_temp-1.0.zip \
-  && chmod -R 755 /usr/local/www/aria2 \
+  && chmod -R 755 /usr/local/www/aria2
