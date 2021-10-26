@@ -13,10 +13,14 @@ chown -R junv:junv \
          /app/.cache \
          /usr/local \
          /var/log \
-         /data
+         /downloads
 
 chmod +x /app/caddy.sh \
-         /app/aria2c.sh
+         /app/aria2c.sh \
+         /app/conf/clean.sh \
+         /app/conf/delete.sh \
+         /app/conf/move.sh \
+         /app/conf/upload.sh
 
 echo "**** give caddy permissions to use low ports ****"
 setcap cap_net_bind_service=+ep /usr/local/bin/caddy
