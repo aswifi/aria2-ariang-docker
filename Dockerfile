@@ -45,7 +45,7 @@ RUN rm ./install.sh
 VOLUME /app/conf/key
 
 # file downloading folder
-VOLUME /data
+VOLUME /downloads
 
 EXPOSE 80 443
 
